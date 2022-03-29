@@ -1,0 +1,105 @@
+@import "./../../styles/config/variables";
+
+/* ===== HEADER ===== */
+.header {
+	width: 100%;
+	background-color: $body-color;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z-fixed;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+	transition: 0.3 ease all;
+}
+
+.nav {
+	height: $headerHeight;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__menu {
+		@media screen and (max-width: 767px) {
+			position: fixed;
+			background-color: $body-color;
+			backdrop-filter: blur(2px);
+			box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+			padding: 2.5rem 0;
+			width: 90%;
+			top: -100%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			transition: 0.4s;
+			border-radius: 2rem;
+			z-index: $z-fixed;
+
+			&.isMenu {
+				top: calc(#{$headerHeight} + 1rem);
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 1.5rem;
+	}
+
+	&__logo,
+	&__toggle {
+		color: $title-color;
+		font-weight: $font-semi-bold;
+	}
+
+	&__icon {
+		color: rgba($color: $text-color, $alpha: 0.6);
+		font-weight: $font-semi-bold;
+	}
+
+	&__link {
+		color: $title-color;
+		font-weight: $font-semi-bold;
+		&__active {
+			position: relative;
+			color: $title-color;
+			font-weight: $font-semi-bold;
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -0.75rem;
+				left: 45%;
+				width: 5px;
+				height: 5px;
+				background-color: $title-color;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	&__toggle {
+		font-size: 1.3rem;
+		cursor: pointer;
+	}
+
+	&__icon {
+		display: none;
+	}
+
+	@include breakpoint(md) {
+		height: calc(#{$headerHeight} + 1.5rem);
+
+		&__list {
+			flex-direction: row;
+			column-gap: 3rem;
+		}
+		&__toggle {
+			display: none;
+		}
+		&__icon {
+			display: inline-block;
+			font-size: 1.3rem;
+		}
+	}
+}

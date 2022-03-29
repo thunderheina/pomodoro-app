@@ -1,0 +1,48 @@
+@import "./../../styles/config/variables";
+
+.buttons {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	gap: 1.5rem;
+}
+
+.button {
+	display: inline-block;
+	font-family: $body-font;
+	font-size: $normal-font-size;
+	background-color: $first-color;
+	color: $first-color-light;
+	padding: 0.75rem 1.5rem;
+	font-weight: $font-semi-bold;
+	border-radius: 1rem;
+
+	&:hover {
+		background-color: $first-color-alt;
+	}
+
+	&-flex {
+		display: inline-flex;
+		align-items: center;
+		column-gap: 0.25rem;
+		padding: 0.75rem 1rem;
+	}
+
+	&__icon {
+		margin-right: $mb-0-5;
+		font-size: 1.5rem;
+	}
+}
+
+.btn {
+	font-size: 4rem;
+	background-color: transparent;
+	color: $first-color-lighten;
+	border: 0;
+	display: inline-block;
+	cursor: pointer;
+
+	&:hover {
+		color: $first-color;
+	}
+}

@@ -1,0 +1,28 @@
+/* ===== LAYOUT ===== */
+.section {
+	padding: 4.5rem 0 1rem;
+	max-width: 340px;
+	margin: 0 auto;
+	text-align: center;
+
+	&__title {
+		font-size: $h2-font-size;
+		color: $title-color;
+		margin-bottom: $mb-1-5;
+	}
+}
+
+.container {
+	max-width: 968px;
+	margin-left: $mb-1-5;
+	margin-right: $mb-1-5;
+
+	@include breakpoint(xl) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.grid {
+	display: grid;
+}

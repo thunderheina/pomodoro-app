@@ -1,0 +1,20 @@
+@import "./../../../../styles/config/variables";
+
+.CircularProgressbar-path {
+	stroke-linecap: round;
+	transition: stroke-dashoffset 0.5s ease 0s;
+}
+.CircularProgressbar-trail {
+	stroke: $first-color-light;
+	stroke-linecap: round;
+}
+.CircularProgressbar-text {
+	font-size: 20px;
+	dominant-baseline: middle;
+	text-anchor: middle;
+	fill: $text-color;
+}
+
+.timer__section {
+	row-gap: 1.5rem;
+}

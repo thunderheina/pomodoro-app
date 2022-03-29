@@ -1,0 +1,12 @@
+.settings__btn:hover .button__icon {
+	animation: 3s linear 0s normal none infinite running spin;
+	-webkit-animation: 3s linear 0s normal none infinite running spin;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

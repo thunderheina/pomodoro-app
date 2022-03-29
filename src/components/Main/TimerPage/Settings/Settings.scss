@@ -1,0 +1,45 @@
+@import "./../../../../styles/config/variables";
+
+.settings {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	&__slider {
+		gap: 1rem;
+	}
+	&__label {
+		display: block;
+	}
+	&__button {
+		align-self: center;
+	}
+
+	&__button:hover .button__icon {
+		transform: translateX(-0.3rem);
+	}
+}
+
+.slider {
+	height: 40px;
+	border-radius: 20px;
+	background-color: $first-color-lighten;
+}
+
+.thumb {
+	background-color: $first-color;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+}
+
+.thumb:active,
+.thumb:focus {
+	outline: none;
+	border: none;
+}
